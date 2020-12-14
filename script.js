@@ -100,7 +100,7 @@ var restoreBook = function (title) {
   this.store.push(this.archive[index]);
   this.archive.splice(index, 1);
 };
-
+// ---------------------------these are some books in the store----------------------
 var library = bookStore();
 library.createandAddBook(
   "Nothing left to lose",
@@ -141,6 +141,19 @@ library.createandAddBook(
   "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517366811l/38306220._SY475_.jpg"
 );
 
+// /-------------this is the first button for showing add book--------------------
+$(".button-addbook").hide();
+$(".add").click(function () {
+  $(".adddiv").hide("slow");
+  $(".button-addbook").show("slow");
+});
+$(".removee").click(function () {
+  $(".button-addbook").hide("slow");
+  $(".adddiv").show("slow");
+});
+// ------------------------------------------------------------------------------
+
+//-------------- this fuction down here is used to search for a book in the DOM---------
 $("#addbook-button").on("click", function () {
   console.log($("#title-button").val());
   var title = $("#title-button").val();
@@ -149,21 +162,32 @@ $("#addbook-button").on("click", function () {
   var cover = $("#link-image-button").val();
   library.createandAddBook(title, price, author, cover);
 });
-
 $(".btn-s").on("click", function () {
   $(".searching-result").empty();
-  var foundBook = searchBook($("#s1").val(), library.store);
-  var img =
-    "<img src='" + foundBook.cover + "' style='width:40% ; height: 100% ;'  >";
-  var result1 =
-    "<p id='foundBook-result' class='found-book'  >" + foundBook.title + "</p>";
-  var Price1 =
-    "<p id='foundBook-price'  >It Cost's : $" + foundBook.price + "</p>";
-  var Author1 =
-    "<p class='found-book' > Written by :" + foundBook.author + "</p>";
-  $(".searching-result").append(img);
-  $(".searching-result").append(result1);
-  $(".searching-result").append(Author1);
-  $(".searching-result").append(Price1);
-  $("#s1".val()).reset();
+  var input = $("#s1").val();
+  if (input) {
+    var foundBook = searchBook($("#s1").val(), library.store);
+    var img =
+      "<img src='" +
+      foundBook.cover +
+      "' style='width:40% ; height: 100% ;'  >";
+    var result1 =
+      "<p id='foundBook-result' class='found-book'  >" +
+      foundBook.title +
+      "</p>";
+    var Price1 =
+      "<p id='foundBook-price'  >It Cost's : $" + foundBook.price + "</p>";
+    var Author1 =
+      "<p class='found-book' > Written by :" + foundBook.author + "</p>";
+    $(".searching-result").append(img);
+    $(".searching-result").append(result1);
+    $(".searching-result").append(Author1);
+    $(".searching-result").append(Price1);
+    $("#s1").val("");
+  }
+  // else if (!input) {
+  //   var notFound = "<p id='foundBook-pricee'  >" + "book not found " + "</p>";
+  //   $(".searching-result").append(notFound);
+  //   return;
+  // }
 });
