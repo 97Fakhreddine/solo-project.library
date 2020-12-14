@@ -2,8 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>library</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0,maximum-scale=1, user-scalable=no"" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Nerko+One&family=Pacifico&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"
+    ></script>
+    <title>Library</title>
   </head>
-  <body></body>
+  <body>
+    <!-- banner -->
+    <nav>
+      <div class="banner">
+        <h1>Welcome To The library</h1>
+      </div>
+      <div class="contactUs">
+        <span> About Us </span>
+      </div>
+      <div class="store">Store</div>
+    </nav>
+    <!--end of header-->
+    <header>
+      <div class="img1">
+        <img src="https://wallpaperaccess.com/full/124378.jpg" alt="" />
+      </div>
+      <br />
+      <div class="button-addbook">
+        <input type="text" placeholder="Add title" id="title-button" />
+        <input type="text" placeholder="Add Price" id="Price-button" />
+        <input type="text" placeholder="Add Author" id="Author-button" />
+        <input
+          type="text"
+          placeholder="Add link of image"
+          id="link-image-button"
+        />
+        <button id="addbook-button">Submit to add</button>
+      </div>
+    </header>
+    <br />
+    <section class="serching-section">
+      <div class="searching-div">
+        <input type="text" placeholder="Serching in here" id="s1" />
+        <button class="btn-s">Search</button>
+      </div>
+      <div class="searching-result"></div>
+    </section>
+    <!-- end of section of searching book -->
+    <br />
+    <section class="updating-book">
+      <div class="updating-div">
+        <input type="text" placeholder="New price of the book" id="s2" />
+        <button class="btn-s2">Add to update the book</button>
+      </div>
+      <div class="updating-price"></div>
+    </section>
+    <!-- end of section of updating book -->
+    <br />
+    <section class="removing-book">
+      <div class="removing-div">
+        <input type="text" placeholder="Title of the book" id="s3" />
+        <button class="btn-s3">Submit to Remove</button>
+      </div>
+      <div class="removing-result"></div>
+    </section>
+    <!-- end of section of removing book -->
+    <section class="restoring-book">
+      <div class="restoring-div">
+        <input type="text" placeholder="Title of the book" id="s4" />
+        <button class="btn-s4">Bring it Back</button>
+      </div>
+      <div class="restored-book"></div>
+    </section>
+    <!-- end of section of restoring book  -->
+    <br />
+    <div class="space">
+      <p>
+        I have created this web page in order to improve my web creation
+        performance and practice my tools more quickly and test some features of
+        the web using css and javascript plus html elements, i hope my first web
+        design is not that bad.
+      </p>
+    </div>
+    <footer>Copyright &copy; 2020, My website during Bootstrap at RBK</footer>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
 </html>

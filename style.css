@@ -1,0 +1,379 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, red);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, red);
+}
+/*----------------------------------------End of  scrolling bar -------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  background-color: silver;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  position: relative;
+  font-weight: 700;
+  border: none;
+  background-color: #8b4513;
+  background-attachment: fixed;
+  border-radius: 5px;
+  box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.2),
+    0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  height: 150px;
+}
+span {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  text-decoration-line: none;
+  color: aliceblue;
+}
+@media screen and (max-width: 1920px) {
+  nav {
+    min-width: 480px;
+  }
+}
+.banner {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  text-decoration-line: none;
+  color: aliceblue;
+}
+.store {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  text-decoration-line: none;
+  color: aliceblue;
+}
+#foundBook-result {
+  color: black;
+  float: right;
+  margin-top: 19px;
+  margin-right: 7em;
+  margin-left: 5px;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Courier New", " Courier", "monospace";
+}
+.found-book {
+  color: black;
+  float: right;
+  margin-top: -12em;
+  margin-right: 3em;
+  margin-left: 5px;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Courier New", " Courier", "monospace";
+}
+#foundBook-price {
+  color: black;
+  float: right;
+  margin-top: -10em;
+  margin-right: 6em;
+  margin-left: 5px;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Courier New", " Courier", "monospace";
+}
+
+/*----------------------------------- End of Part of Navigator  -----------------------------------*/
+header {
+  box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.2),
+    0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+}
+.img1 {
+  position: relative;
+  width: 20%;
+  opacity: 0.9;
+}
+.button-addbook {
+  float: right;
+  position: relative;
+}
+#title-button {
+  float: right;
+  padding: 10px 20px;
+  margin-top: -50em;
+  margin-bottom: 100px;
+  margin-right: 10em;
+  position: relative;
+}
+#Price-button {
+  float: right;
+  padding: 10px 20px;
+  margin-top: -45em;
+  margin-bottom: 100px;
+  margin-right: 10em;
+  position: relative;
+}
+#Author-button {
+  float: right;
+  padding: 10px 20px;
+  margin-top: -40em;
+  margin-bottom: 100px;
+  margin-right: 10em;
+  position: relative;
+}
+#link-image-button {
+  float: right;
+  padding: 10px 20px;
+  margin-top: -35em;
+  margin-bottom: 100px;
+  margin-right: 10em;
+  position: relative;
+}
+#addbook-button {
+  float: right;
+  padding: 10px 20px;
+  margin-top: -30em;
+  margin-bottom: 100px;
+  margin-right: 13em;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+}
+#addbook-button:hover {
+  background: silver;
+  transition: 0.25px;
+}
+/* ------------------------------End of the first part css of the header ------------------------- */
+/* /* ---------------------------------------------------------------------------------------- */
+
+.serching-section {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+}
+.searching-div {
+  background-color: rgb(55, 58, 58);
+  width: 30%;
+  height: 400px;
+  float: left;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#s1 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  position: relative;
+  margin-left: 8em;
+}
+.btn-s {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 1em;
+  margin-left: 12px;
+  position: relative;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-s:hover {
+  background: silver;
+  transition: 0.25px;
+}
+.searching-result {
+  float: right;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  border: solid 1px black;
+  float: right;
+  padding: 10px 20px;
+  margin-top: 0;
+  margin-right: 10em;
+  position: relative;
+  width: 900px;
+  height: 400px;
+}
+/*----------------------------------- End of Section of serching-------------------------------------*/
+.updating-book {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+}
+.updating-div {
+  background-color: #e6ffff;
+  width: 30%;
+  height: 400px;
+  float: left;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#s2 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  position: relative;
+  margin-left: 4em;
+}
+.btn-s2 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 1em;
+  margin-left: 12px;
+  position: relative;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-s2:hover {
+  background: silver;
+  transition: 0.25px;
+}
+.updating-price {
+  float: right;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  border: solid 1px black;
+  float: right;
+  padding: 10px 20px;
+  margin-top: 0;
+  margin-right: 10em;
+  position: relative;
+  width: 900px;
+  height: 300px;
+}
+/* ----------------------------end of section of updating book------------------------------- */
+.removing-book {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 6%;
+}
+.removing-div {
+  background-color: #ffcccc;
+  width: 30%;
+  height: 400px;
+  float: left;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#s3 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  position: relative;
+  margin-left: 4em;
+}
+.btn-s3 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 1em;
+  margin-left: 12px;
+  position: relative;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-s3:hover {
+  background: silver;
+  transition: 0.25px;
+}
+.removing-result {
+  float: right;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  border: solid 1px black;
+  float: right;
+  padding: 10px 20px;
+  margin-top: 0;
+  margin-right: 10em;
+  position: relative;
+  width: 900px;
+  height: 300px;
+}
+/* ----------------------end of section of removing book ------------------------ */
+.restoring-book {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+.restoring-div {
+  background-color: #ffe6e6;
+  width: 30%;
+  height: 400px;
+  float: left;
+  /* margin-bottom: 2em; */
+  border-radius: 10px;
+  margin-left: 6em;
+  border: 1px solid black;
+}
+#s4 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 0;
+  position: relative;
+  margin-left: 4em;
+}
+.btn-s4 {
+  padding: 10px 20px;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  margin-right: 1em;
+  margin-left: 12px;
+  position: center;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-s4:hover {
+  background: silver;
+  transition: 0.25px;
+}
+.restored-book {
+  float: right;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 60px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  border: solid 1px black;
+  padding: 10px 20px;
+  margin-top: 2em;
+  margin-right: 10em;
+  position: relative;
+  width: 900px;
+  height: 300px;
+}
+/* ----------------------end of section of restoring book ----------------------  */
+
+.space {
+  margin-top: 110em;
+  background-color: #a0522d;
+  height: 25em;
+  border-radius: 1em;
+}
+p {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 45px;
+  color: white;
+  position: relative;
+  float: left;
+  text-align: center;
+  position: relative;
+  padding: auto;
+  margin-top: 98px;
+  margin-left: 2em;
+  margin-right: 3em;
+}
+footer {
+  margin-left: 17em;
+  font-size: 2em;
+
+  position: relative center;
+  margin-bottom: 2%;
+}
