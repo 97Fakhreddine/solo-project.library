@@ -92,7 +92,9 @@ var removeBook = function (title) {
   this.store.splice(index, 1);
 };
 var updateBook = function (title, newPrice) {
-  this.store[this.searchBook(title, this.store)].price = newPrice;
+  var that = this;
+  that.searchBook(title, that.store).price = newPrice;
+  console.log(that.searchBook(title, that.store).price);
 };
 var restoreBook = function (title) {
   var index = this.searchBook(title, this.archive);
@@ -152,8 +154,6 @@ $(".removee").click(function () {
   $(".adddiv").show("slow");
 });
 // ------------------------------------------------------------------------------
-
-//-------------- this fuction down here is used to search for a book in the DOM---------
 $("#addbook-button").on("click", function () {
   console.log($("#title-button").val());
   var title = $("#title-button").val();
@@ -161,7 +161,15 @@ $("#addbook-button").on("click", function () {
   var author = $("#Author-button").val();
   var cover = $("#link-image-button").val();
   library.createandAddBook(title, price, author, cover);
+  $("#title-button").val("");
+  $("#Price-button").val("");
+  $("#Author-button").val("");
+  $("#link-image-button").val("");
+  $("#addbook-button").after("<h1 id='resultOfaddingBook'>Done!</h1>");
 });
+
+//-------------- this fuction down here is used to search for a book in the DOM---------
+
 $(".btn-s").on("click", function () {
   $(".searching-result").empty();
   var input = $("#s1").val();
@@ -190,4 +198,25 @@ $(".btn-s").on("click", function () {
   //   $(".searching-result").append(notFound);
   //   return;
   // }
+});
+
+// ----------------------this part will be for the updating book ----------------------
+$(".btn-s2").on("click", function () {
+  $(".updating-price").empty();
+  var xtitle = $("#s2").val();
+  var yprice = $("#22").val();
+  if (!xtitle) {
+    $(".updating-price").append(
+      "<h1 id='updatingDisplay'> please check your research  title,your book does not exist !!</h1>"
+    );
+
+    return;
+  } else {
+    library.updateBook(xtitle, yprice);
+    $(".updating-price").append(
+      "<h1 id='updatingDisplay'>Thanks for your your updating price !</h1>"
+    );
+    $("#s2").val("");
+    $("#22").val("");
+  }
 });
