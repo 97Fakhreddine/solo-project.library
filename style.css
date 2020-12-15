@@ -248,6 +248,15 @@ header {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
+#foundBook-pricee {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  text-align: center;
+  margin-top: 2em;
+  margin-left: 3em;
+
+  position: relative;
+}
 .btn-s:hover {
   background: silver;
   transition: 0.25px;

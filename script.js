@@ -87,9 +87,15 @@ var searchBook = function (title, array) {
 // };
 
 var removeBook = function (title) {
-  var index = this.searchBook(title, this.store);
-  this.archive.push(this.store[index]);
-  this.store.splice(index, 1);
+  var that = this;
+  for (var i = 0; i < that.store.length; i++) {
+    if (title.toUpperCase() === that.store[i].title.toUpperCase()) {
+      var obj = that.store[i];
+      that.archive.push(obj);
+      that.store.splice(i, 1);
+    }
+  }
+  return;
 };
 var updateBook = function (title, newPrice) {
   var that = this;
@@ -173,8 +179,21 @@ $("#addbook-button").on("click", function () {
 $(".btn-s").on("click", function () {
   $(".searching-result").empty();
   var input = $("#s1").val();
+  if (
+    searchBook($("#s1").val(), library.store) === "Your book is not found" ||
+    !input
+  ) {
+    $(".searching-result").empty();
+    var notFound =
+      "<p id='foundBook-pricee'  >" +
+      "please check your research  title,your book does not exist " +
+      "</p>";
+    $(".searching-result").append(notFound);
+    return;
+  }
+
   if (input) {
-    var foundBook = searchBook($("#s1").val(), library.store);
+    var foundBook = searchBook(input, library.store);
     var img =
       "<img src='" +
       foundBook.cover +
@@ -192,31 +211,59 @@ $(".btn-s").on("click", function () {
     $(".searching-result").append(Author1);
     $(".searching-result").append(Price1);
     $("#s1").val("");
+    return;
   }
-  // else if (!input) {
-  //   var notFound = "<p id='foundBook-pricee'  >" + "book not found " + "</p>";
-  //   $(".searching-result").append(notFound);
-  //   return;
-  // }
+  $(".searching-result").empty();
+  var notFound =
+    "<p id='foundBook-pricee'  >" +
+    "please check your research  title,your book does not exist " +
+    "</p>";
+  $(".searching-result").append(notFound);
 });
 
 // ----------------------this part will be for the updating book ----------------------
 $(".btn-s2").on("click", function () {
   $(".updating-price").empty();
   var xtitle = $("#s2").val();
-  var yprice = $("#22").val();
-  if (!xtitle) {
+  var yprice = $("#s22").val() * 1;
+  console.log("this is the price input ===> ", yprice);
+  if (
+    !xtitle ||
+    searchBook(xtitle, library.store) === "Your book is not found"
+  ) {
     $(".updating-price").append(
       "<h1 id='updatingDisplay'> please check your research  title,your book does not exist !!</h1>"
     );
-
+    $("#s2").val("");
+    $("#s22").val("");
     return;
   } else {
     library.updateBook(xtitle, yprice);
     $(".updating-price").append(
-      "<h1 id='updatingDisplay'>Thanks for your your updating price !</h1>"
+      "<h1 id='updatingDisplay'>Thanks for your  updating price !</h1>"
     );
     $("#s2").val("");
-    $("#22").val("");
+    $("#s22").val("");
   }
+});
+//------------------------------------ done!!------------------------------------------------
+$(".btn-s3").on("click", function () {
+  $(".removing-result").empty();
+  var newTitle = $("#s3").val();
+  // if (
+  //   !newTitle ||
+  //   searchBook(newTitle, library.store) === "Your book is not found"
+  // ) {
+  //   $(".removing-result").append(
+  //     "<h1 id='updatingDisplay'> please check your research  title,your book does not exist !!</h1>"
+  //   );
+  //   $("#s3").val("");
+  //   return;
+  // }
+  library.restoreBook($("#s3").val());
+  console.log("thiis =>", library.restoreBook($("#s3").val()));
+  $(".removing-result").append(
+    "<h1 id='updatingDisplay'>the book has been deleted !</h1>"
+  );
+  $("#s3").val("");
 });
