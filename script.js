@@ -148,7 +148,78 @@ library.createandAddBook(
   "Celeste Grande",
   "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1517366811l/38306220._SY475_.jpg"
 );
-
+library.createandAddBook(
+  "Wild Man Creek",
+  30,
+  "Robyn Carr",
+  "https://www.robyncarr.com/wp-content/uploads/2016/02/9780778317579.jpg"
+);
+library.createandAddBook(
+  "A Case of Possession",
+  100,
+  "K. J. Charles",
+  "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490704393l/34715201._SY475_.jpg"
+);
+library.createandAddBook(
+  "The Best Goodbye",
+  20,
+  "Abbi Glines",
+  "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418330193l/23452649.jpg"
+);
+library.createandAddBook(
+  "Queen of Shadows",
+  24,
+  "Sarah J. Maas",
+  "https://images-na.ssl-images-amazon.com/images/I/81pDre-+0ML.jpg"
+);
+library.createandAddBook(
+  "Crown of Midnight",
+  10,
+  "Sarah J. Maas",
+  "https://images-na.ssl-images-amazon.com/images/I/81QaOS36qXL.jpg"
+);
+library.createandAddBook(
+  "A Wolf's Duty",
+  15,
+  " Jennifer T. Alli",
+  "https://images-na.ssl-images-amazon.com/images/I/41gDwjsufuL._BO1,204,203,200_.jpg"
+);
+library.createandAddBook(
+  "Crown of Midnight",
+  15,
+  "Sarah J. Maas",
+  "https://images-na.ssl-images-amazon.com/images/I/81-S0vuvAqL.jpg"
+);
+library.createandAddBook(
+  "The Immortals of Meluha",
+  12,
+  "Amish Tripathi",
+  "https://www.harappa.com/sites/default/files/images/91zAAyo36HL.jpg"
+);
+library.createandAddBook(
+  "Tower of Dawn",
+  24,
+  " Sarah J. Maas",
+  "https://images-na.ssl-images-amazon.com/images/I/91pmqiTzBhL.jpg"
+);
+library.createandAddBook(
+  "Carnal Secrets",
+  32,
+  "Suzanne Wright",
+  "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1380674441l/17853851.jpg"
+);
+library.createandAddBook(
+  "Wicked Cravings",
+  24,
+  "Suzanne Wright",
+  "https://m.media-amazon.com/images/I/51NTxGQVmCL.jpg"
+);
+library.createandAddBook(
+  "Lucifer Book Five",
+  36,
+  "Mike Carey",
+  "https://images-na.ssl-images-amazon.com/images/I/81gbMYhLPwL.jpg"
+);
 // /-------------this is the first button for showing add book--------------------
 $(".button-addbook").hide();
 $(".add").click(function () {
@@ -289,7 +360,6 @@ $(".btn-s4").on("click", function () {
   $("#s4").val("");
 });
 // -------------------------------------------------------------------------------
-
 for (var i = 0; i < library.store.length; i++) {
   $(".portfolio").append(`
         <div class="categoryStore">
@@ -306,7 +376,7 @@ $(".btn-s").on("click", function () {
       </div>`);
   }
 });
-
+// -----------------------------------------------------------------
 function go() {
   location.replace("store.html");
 }
@@ -316,3 +386,4 @@ function goback() {
 function about() {
   location.replace("https://github.com/97Fakhreddine");
 }
+// -----------------------------------------------------------------

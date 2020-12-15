@@ -29,7 +29,7 @@ nav {
 }
 
 body {
-  background-color: #808080;
+  background-color: whitesmoke;
 }
 
 #titleStore {
@@ -54,7 +54,8 @@ body {
 }
 .categoryStore {
   background-color: white;
-  box-shadow: 0 40px 8px 10 #fff, 0 60px 20px 10 #fff;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2),
+    0 30px 20px 0 rgba(0, 0, 0, 0.19);
   width: 20%;
   height: 30%;
   float: left;
@@ -70,8 +71,8 @@ body {
   background-color: transparent;
   display: flex;
   cursor: pointer;
-  box-shadow: 0 80px 40px 0 rgba(0, 0, 0, 0.2),
-    0 80px 80px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2),
+    0 20px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #storeCovering {
   font-family: "Courier New", Courier, monospace;
