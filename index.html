@@ -31,85 +31,87 @@
     ></script>
     <title>Library</title>
   </head>
+
   <body>
-    <!-- banner -->
+    <!-- -------------------------------banner------------------------------- -->
     <nav>
       <div class="banner">
         <h1>Welcome To The library</h1>
       </div>
       <div class="contactUs">
-        <span> About Us </span>
+        <span onclick="about()">About Us </span>
       </div>
-      <div class="store">Store</div>
+      <div class="store" onclick="go()">Store</div>
     </nav>
-    <!--end of header-->
-    <header>
-      <div class="img1">
-        <img
-          src="/books photos/2019_03_02_66706_1551461528._large.jpg"
-          alt=""
-        />
-      </div>
+    <!-------------------------------end of header--------------------------->
+    <div>
+      <header>
+        <div class="img1">
+          <img
+            src="/books photos/2019_03_02_66706_1551461528._large.jpg"
+            alt=""
+          />
+        </div>
+        <br />
+        <div class="adddiv">
+          <h1>Add Book From Here</h1>
+          <button class="add">+</button>
+        </div>
+        <div class="button-addbook">
+          <button class="removee">x</button>
+          <input type="text" placeholder="Add title" id="title-button" />
+          <input type="text" placeholder="Add Price" id="Price-button" />
+          <input type="text" placeholder="Add Author" id="Author-button" />
+          <input
+            type="text"
+            placeholder="Add link of image"
+            id="link-image-button"
+          />
+          <button id="addbook-button">Submit to add</button>
+        </div>
+      </header>
       <br />
-      <div class="adddiv">
-        <h1>Add Book From Here</h1>
-        <button class="add">+</button>
-      </div>
-      <div class="button-addbook">
-        <button class="removee">x</button>
-        <input type="text" placeholder="Add title" id="title-button" />
-        <input type="text" placeholder="Add Price" id="Price-button" />
-        <input type="text" placeholder="Add Author" id="Author-button" />
-        <input
-          type="text"
-          placeholder="Add link of image"
-          id="link-image-button"
-        />
-        <button id="addbook-button">Submit to add</button>
-      </div>
-    </header>
-    <br />
-    <section class="serching-section">
-      <div class="searching-div">
-        <h1 class="discriptionOnDivs">Search for a Book</h1>
-        <input type="text" placeholder="Serching in here" id="s1" />
-        <button class="btn-s">Search</button>
-      </div>
-      <div class="searching-result"></div>
-    </section>
-    <!-- end of section of searching book -->
-    <br />
-    <section class="updating-book">
-      <div class="updating-div">
-        <h1 class="discriptionOnDivs">Update the Price of the Book</h1>
-        <input type="text" placeholder="Title of the book" id="s2" />
-        <input type="number" placeholder="New price of the book" id="s22" />
-        <button class="btn-s2">Add to update the book</button>
-      </div>
-      <div class="updating-price"></div>
-    </section>
-    <!-- end of section of updating book -->
-    <br />
-    <section class="removing-book">
-      <div class="removing-div">
-        <h1 class="discriptionOnDivs">Archive The Book</h1>
-        <input type="text" placeholder="Title of the book" id="s3" />
+      <section class="serching-section">
+        <div class="searching-div">
+          <h1 class="discriptionOnDivs">Search for a Book</h1>
+          <input type="text" placeholder="Serching in here" id="s1" />
+          <button class="btn-s">Search</button>
+        </div>
+        <div class="searching-result"></div>
+      </section>
+      <!----------------------------- end of section of searching book-------------------- -->
+      <br />
+      <section class="updating-book">
+        <div class="updating-div">
+          <h1 class="discriptionOnDivs">Update the Price of the Book</h1>
+          <input type="text" placeholder="Title of the book" id="s2" />
+          <input type="number" placeholder="New price of the book" id="s22" />
+          <button class="btn-s2">Add to update the book</button>
+        </div>
+        <div class="updating-price"></div>
+      </section>
+      <!-- end of section of updating book -->
+      <br />
+      <section class="removing-book">
+        <div class="removing-div">
+          <h1 class="discriptionOnDivs">Archive The Book</h1>
+          <input type="text" placeholder="Title of the book" id="s3" />
 
-        <button class="btn-s3">Submit to Remove</button>
-      </div>
-      <div class="removing-result"></div>
-    </section>
-    <!-- end of section of removing book -->
-    <section class="restoring-book">
-      <div class="restoring-div">
-        <h1 class="discriptionOnDivs">Unarchive The Book</h1>
-        <input type="text" placeholder="Title of the book" id="s4" />
-        <button class="btn-s4">Bring it Back</button>
-      </div>
-      <div class="restored-book"></div>
-    </section>
-    <!-- end of section of restoring book  -->
-    <br />
+          <button class="btn-s3">Submit to Remove</button>
+        </div>
+        <div class="removing-result"></div>
+      </section>
+      <!-- end of section of removing book -->
+      <section class="restoring-book">
+        <div class="restoring-div">
+          <h1 class="discriptionOnDivs">Unarchive The Book</h1>
+          <input type="text" placeholder="Title of the book" id="s4" />
+          <button class="btn-s4">Bring it Back</button>
+        </div>
+        <div class="restored-book"></div>
+      </section>
+      <!-- end of section of restoring book  -->
+    </div>
     <div class="space">
       <p>
         I have created this web page in order to improve my web creation
@@ -119,6 +121,6 @@
       </p>
     </div>
     <footer>Copyright &copy; 2020, My website during Bootstrap at RBK</footer>
+    <script type="text/javascript" src="script.js"></script>
   </body>
-  <script type="text/javascript" src="script.js"></script>
 </html>

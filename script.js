@@ -288,3 +288,31 @@ $(".btn-s4").on("click", function () {
   );
   $("#s4").val("");
 });
+// -------------------------------------------------------------------------------
+
+for (var i = 0; i < library.store.length; i++) {
+  $(".portfolio").append(`
+        <div class="categoryStore">
+          <img src="${library.store[i].cover}" alt="" class='storeCovering'/>
+          <p id='storeCovering'>${library.store[i].title}</p>
+      </div>`);
+}
+$(".btn-s").on("click", function () {
+  for (var i = 0; i < library.store.length; i++) {
+    $(".portfolio").append(`
+        <div class="categoryStore">
+          <img src="${library.store[i].cover}" alt="" class='storeCovering'/>
+          <p id='storeCovering'>${library.store[i].title}</p>
+      </div>`);
+  }
+});
+
+function go() {
+  location.replace("store.html");
+}
+function goback() {
+  location.replace("index.html");
+}
+function about() {
+  location.replace("https://github.com/97Fakhreddine");
+}

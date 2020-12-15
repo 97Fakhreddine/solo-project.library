@@ -1,0 +1,81 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #000000);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, red);
+}
+/*----------------------------------------End of  scrolling bar -------------------------------------*/
+
+nav {
+  display: fixed;
+  background-color: silver;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  position: relative;
+  font-weight: 700;
+  border: none;
+  background-color: #8b4513;
+  background-attachment: fixed;
+  border-radius: 5px;
+  box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.2),
+    0 30px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  height: 110px;
+}
+
+body {
+  background-color: #808080;
+}
+
+#titleStore {
+  font-family: "Courier New", Courier, monospace;
+  float: left;
+  color: white;
+  margin-left: 5em;
+  margin-top: 30px;
+  font-size: 2em;
+  position: relative;
+}
+#navHome {
+  font-family: "Courier New", Courier, monospace;
+  float: left;
+  color: white;
+  float: right;
+  position: relative;
+  margin-right: 3em;
+  font-size: 2em;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.categoryStore {
+  background-color: white;
+  box-shadow: 0 40px 8px 10 #fff, 0 60px 20px 10 #fff;
+  width: 20%;
+  height: 30%;
+  float: left;
+  margin: 5%;
+}
+.storeCovering {
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.storeCovering:hover {
+  opacity: 0.6;
+  background-color: transparent;
+  display: flex;
+  cursor: pointer;
+  box-shadow: 0 80px 40px 0 rgba(0, 0, 0, 0.2),
+    0 80px 80px 0 rgba(0, 0, 0, 0.19);
+}
+#storeCovering {
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  size: 12px;
+  text-align: center;
+}

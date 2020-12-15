@@ -85,6 +85,7 @@ span {
   font-size: 30px;
   text-decoration-line: none;
   color: aliceblue;
+  cursor: pointer;
 }
 @keyframes animate {
   50% {
@@ -109,6 +110,7 @@ span {
   font-size: 30px;
   text-decoration-line: none;
   color: aliceblue;
+  cursor: pointer;
 }
 #foundBook-result {
   color: black;
@@ -435,6 +437,7 @@ header {
   width: 900px;
   height: 300px;
 }
+
 /* ----------------------end of section of restoring book ----------------------  */
 
 .space {
