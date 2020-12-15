@@ -105,7 +105,7 @@ var updateBook = function (title, newPrice) {
 var restoreBook = function (title) {
   var index = this.searchBook(title, this.archive);
   console.log(index);
-  this.store.push(this.archive[index]);
+  this.store.push(index);
   this.archive.splice(index, 1);
 };
 // ---------------------------these are some books in the store----------------------
@@ -247,23 +247,44 @@ $(".btn-s2").on("click", function () {
   }
 });
 //------------------------------------ done!!------------------------------------------------
+// ------------------------this function of deleting book ------------------------------------
 $(".btn-s3").on("click", function () {
   $(".removing-result").empty();
   var newTitle = $("#s3").val();
-  // if (
-  //   !newTitle ||
-  //   searchBook(newTitle, library.store) === "Your book is not found"
-  // ) {
-  //   $(".removing-result").append(
-  //     "<h1 id='updatingDisplay'> please check your research  title,your book does not exist !!</h1>"
-  //   );
-  //   $("#s3").val("");
-  //   return;
-  // }
-  library.restoreBook($("#s3").val());
-  console.log("thiis =>", library.restoreBook($("#s3").val()));
+  if (
+    !newTitle ||
+    searchBook(newTitle, library.store) === "Your book is not found"
+  ) {
+    $(".removing-result").append(
+      "<h1 id='updatingDisplay'> please check your research  title,your book does not exist !!</h1>"
+    );
+    $("#s3").val("");
+    return;
+  }
+  library.removeBook(newTitle);
+  console.log("thiis =>", library.removeBook(newTitle));
   $(".removing-result").append(
     "<h1 id='updatingDisplay'>the book has been deleted !</h1>"
   );
   $("#s3").val("");
+});
+// ----------------------------------------------------------------------------------
+$(".btn-s4").on("click", function () {
+  $(".restored-book").empty();
+  var newTitle = $("#s4").val();
+  if (
+    !newTitle ||
+    searchBook(newTitle, library.archive) === "Your book is not found"
+  ) {
+    $(".restored-book").append(
+      "<h1 id='updatingDisplay'> please check your research  title, your book does not exist !!</h1>"
+    );
+    $("#s4").val("");
+    return;
+  }
+  library.restoreBook(newTitle);
+  $(".restored-book").append(
+    "<h1 id='updatingDisplay'>the book has been restored !</h1>"
+  );
+  $("#s4").val("");
 });
