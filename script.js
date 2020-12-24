@@ -378,7 +378,7 @@ $(".btn-s").on("click", function () {
 });
 // -----------------------------------------------------------------
 function go() {
-  location.replace("store.html");
+  location.replace("sign-in.html");
 }
 function goback() {
   location.replace("index.html");
